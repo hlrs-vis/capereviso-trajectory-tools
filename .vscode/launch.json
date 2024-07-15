@@ -1,0 +1,186 @@
+{
+    // Use IntelliSense to learn about possible attributes. config_KIT1.ini
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: VHS Image coordinate selection",
+            "type": "python",
+            "request": "launch",
+            "program": "ImageCoordinatesTool2.py",
+            "subProcess": true,
+            "argExpansion": "none",
+            "args": [
+                "-p",
+                "vhs-calibration/visagx2_background_image_2022-11-30_11-41-11_undistorted.jpg"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: VHS-calibtest",
+            "type": "python",
+            "request": "launch",
+            "program": "global_utm_calib.py",
+            "subProcess": true,
+            "argExpansion": "none",
+            "args": [
+                "-p",
+                "/data/CapeReviso/visagx_calibrations/vhs-calibration/config_vhs_wg_noshow_m.ini"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: undistort image test",
+            "type": "python",
+            "request": "launch",
+            "program": "undistort_image.py",
+            "subProcess": true,
+            "justMyCode": false,
+            "args": [
+                "-i",
+                "calibration/calibration02_i",
+                "-f",
+                "vhs-calibration/visagx2_background_image_2022-11-30_11-41-11.jpg"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: VHS-analysis",
+            "type": "python",
+            "request": "launch",
+            "program": "read_trajectories.py",
+            "subProcess": true,
+            "argExpansion": "none",
+            "args": [
+                "--config",
+                "/data/CapeReviso/visagx_calibrations/vhs-calibration/config_vhs_wg_noshow_m.ini",
+                "/data/CapeReviso/visagx-testdata/vhs/test_2022-12-12_01-17-34.bcrtf"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: SORT test",
+            "type": "python",
+            "request": "launch",
+            "program": "sort_main.py",
+            "subProcess": true,
+            "argExpansion": "none",
+            "args": [
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: SORT bcrtf test",
+            "type": "python",
+            "request": "launch",
+            "program": "sort_create_bcrtf.py",
+            "subProcess": true,
+            "argExpansion": "none",
+            "args": [
+                "--config",
+                "/data/CapeReviso/visagx_calibrations/vhs-calibration/config_vhs_wg_noshow_m.ini",
+                "/data/CapeReviso/visagx-testdata/vhs/playback1_2023-01-13_11-52-31.json"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: short SORT bcrtf test",
+            "type": "python",
+            "request": "launch",
+            "program": "sort_create_bcrtf.py",
+            "subProcess": true,
+            "argExpansion": "none",
+            "args": [
+                "--config",
+                "/data/CapeReviso/visagx_calibrations/vhs-calibration/config_vhs_wg_noshow_m.ini",
+                "/data/CapeReviso/visagx-testdata/vhs/short_playback1_2023-01-13_11-52-31.json"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: medium SORT bcrtf test",
+            "type": "python",
+            "request": "launch",
+            "program": "sort_create_bcrtf.py",
+            "subProcess": true,
+            "argExpansion": "none",
+            "args": [
+                "--config",
+                "/data/CapeReviso/visagx_calibrations/vhs-calibration/config_vhs_wg_noshow_m.ini",
+                "/data/CapeReviso/visagx-testdata/vhs/medium_playback1_2023-01-13_11-52-31.json"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: gz SORT bcrtf test",
+            "type": "python",
+            "request": "launch",
+            "program": "sort_create_bcrtf.py",
+            "subProcess": true,
+            "argExpansion": "none",
+            "args": [
+                "--config",
+                "/data/CapeReviso/visagx_calibrations/vhs-calibration/config_vhs_wg_noshow.ini",
+                "/data/CapeReviso/cameradata/visagx2-vhs/test_2023-01-30_01-13-31.json.gz"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: long SORT bcrtf test",
+            "type": "python",
+            "request": "launch",
+            "program": "sort_create_bcrtf.py",
+            "subProcess": true,
+            "argExpansion": "none",
+            "args": [
+                "--config",
+                "/data/CapeReviso/visagx_calibrations/vhs-calibration/config_vhs_wg_noshow_m.ini",
+                "/data/CapeReviso/visagx-testdata/vhs/test_2023-05-01_02-10-29.json"
+            ],
+            "console": "integratedTerminal"
+        }, 
+        {
+            "name": "Python: SORT VHS-analysis",
+            "type": "python",
+            "request": "launch",
+            "program": "read_trajectories.py",
+            "subProcess": true,
+            "argExpansion": "none",
+            "args": [
+                "--config",
+                "/data/CapeReviso/visagx_calibrations/vhs-calibration/config_vhs_wg_noshow_m.ini",
+                "/data/CapeReviso/visagx-testdata/vhs/medium_playback1_2023-01-13_11-52-31.bcrtf"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: short SORT VHS-analysis",
+            "type": "python",
+            "request": "launch",
+            "program": "read_trajectories.py",
+            "subProcess": true,
+            "argExpansion": "none",
+            "args": [
+                "--config",
+                "/data/CapeReviso/visagx_calibrations/vhs-calibration/config_vhs_wg_noshow_m.ini",
+                "/data/CapeReviso/visagx-testdata/vhs/short_playback1_2023-01-13_11-52-31.bcrtf"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: long SORT VHS-analysis",
+            "type": "python",
+            "request": "launch",
+            "program": "read_trajectories.py",
+            "subProcess": true,
+            "argExpansion": "none",
+            "args": [
+                "--config",
+                "/data/CapeReviso/visagx_calibrations/vhs-calibration/config_vhs_wg_noshow_m.ini",
+                "/data/CapeReviso/visagx-testdata/vhs/test_2023-05-01_02-10-29.bcrtf"
+            ],
+            "console": "integratedTerminal"
+        },
+    ]
+}
